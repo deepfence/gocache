@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	lib_store "github.com/eko/gocache/lib/v4/store"
+	lib_store "github.com/deepfence/gocache/lib/v4/store"
 	"github.com/jackc/pgx/v5"
 	"github.com/klauspost/compress/s2"
 	_ "github.com/lib/pq"

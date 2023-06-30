@@ -5,7 +5,7 @@ import (
 	"errors"
 	"testing"
 
-	lib_store "github.com/eko/gocache/lib/v4/store"
+	lib_store "github.com/deepfence/gocache/lib/v4/store"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 )
