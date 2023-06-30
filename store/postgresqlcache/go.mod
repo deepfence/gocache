@@ -1,4 +1,4 @@
-module github.com/deepfence/gocache/store/postgresqlcache
+module github.com/deepfence/gocache/store/postgresqlcache/v4
 
 go 1.19
 
