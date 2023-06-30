@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/eko/gocache/lib/v4/codec"
-	"github.com/eko/gocache/lib/v4/store"
+	"github.com/deepfence/gocache/lib/v4/codec"
+	"github.com/deepfence/gocache/lib/v4/store"
 )
 
 // CacheInterface represents the interface for all caches (aggregates, metric, memory, redis, ...)
