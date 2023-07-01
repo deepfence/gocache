@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"context"
 	"database/sql"
+	"errors"
 	"fmt"
 	"io"
 	"net"
@@ -106,15 +107,16 @@ func decompress(src []byte) ([]byte, error) {
 func (s *PostgresqlStore) Get(ctx context.Context, key any) (any, error) {
 	var val []byte
 	err := s.conn.QueryRow(context.Background(), "select value from postgresqlcache where key=$1", cast.ToString(key)).Scan(&val)
-	if err != nil {
-		return nil, err
-	}
-	if len(val) == 0 {
+	if errors.Is(err, pgx.ErrNoRows) {
 		return nil, &lib_store.NotFound{}
-	}
-	val, err = decompress(val)
-	if err != nil {
+	} else if err != nil {
 		return nil, err
+	}
+	if len(val) > 0 {
+		val, err = decompress(val)
+		if err != nil {
+			return nil, err
+		}
 	}
 	return any(val), nil
 }
