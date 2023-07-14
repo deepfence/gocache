@@ -14,6 +14,7 @@ import (
 
 	lib_store "github.com/deepfence/gocache/lib/v4/store"
 	"github.com/jackc/pgx/v5"
+	"github.com/jackc/pgx/v5/pgxpool"
 	"github.com/klauspost/compress/s2"
 	_ "github.com/lib/pq"
 	"github.com/spf13/cast"
@@ -30,14 +31,14 @@ var (
 
 // PostgresqlStore is a store for Redis
 type PostgresqlStore struct {
-	conn    *pgx.Conn
+	conn    *pgxpool.Pool
 	options *lib_store.Options
 }
 
 // NewPostgresqlStore creates a new store to Redis instance(s)
 // connString: postgres://username:password@localhost:5432/database_name?sslmode=disable
 func NewPostgresqlStore(connString string, options ...lib_store.Option) (*PostgresqlStore, error) {
-	conn, err := pgx.Connect(context.Background(), connString)
+	conn, err := pgxpool.New(context.Background(), connString)
 	if err != nil {
 		return nil, err
 	}
@@ -78,7 +79,8 @@ CREATE TABLE IF NOT EXISTS postgresqlcache (
 
 // Close when exit store
 func (s *PostgresqlStore) Close(ctx context.Context) error {
-	return s.conn.Close(ctx)
+	s.conn.Close()
+	return nil
 }
 
 func compress(src []byte, dst io.Writer) error {
@@ -166,8 +168,8 @@ func (s *PostgresqlStore) Invalidate(ctx context.Context, options ...lib_store.I
 			}
 
 			cacheKeys := []string{}
-			if bytes, ok := result.([]byte); ok {
-				cacheKeys = strings.Split(string(bytes), ",")
+			if b, ok := result.([]byte); ok {
+				cacheKeys = strings.Split(string(b), ",")
 			}
 
 			for _, cacheKey := range cacheKeys {
