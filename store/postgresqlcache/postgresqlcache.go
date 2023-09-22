@@ -36,7 +36,7 @@ type PostgresqlStore struct {
 }
 
 // NewPostgresqlStore creates a new store to Redis instance(s)
-// connString: postgres://username:password@localhost:5432/database_name?sslmode=disable
+// connString: postgres://username:password@localhost:5432/database_name?sslmode=disable&pool_max_conns=30&pool_min_conns=10&pool_health_check_period=30s
 func NewPostgresqlStore(connString string, options ...lib_store.Option) (*PostgresqlStore, error) {
 	conn, err := pgxpool.New(context.Background(), connString)
 	if err != nil {
