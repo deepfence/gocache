@@ -1,8 +1,8 @@
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-github.com/deepfence/gocache/lib/v4 v4.1.6 h1:oZpsNsJdC7Mx7xYdCN+sWkK9lL+NTv7hPhT/tabns18=
-github.com/deepfence/gocache/lib/v4 v4.1.6/go.mod h1:7m6If3QG2B2SvQlalgUrEpF6KVrzCw8KyFfv0RDOFCA=
+github.com/deepfence/gocache/lib/v4 v4.1.40 h1:bdF7P8XZZabdyLf4zK22gjxcfflNqJRpxyvWHTtLdfU=
+github.com/deepfence/gocache/lib/v4 v4.1.40/go.mod h1:DupHMktrWJVX+O68QoAfBj8/ECBJwLXcVxvOOzyVIcQ=
 github.com/frankban/quicktest v1.14.4 h1:g2rn0vABPOOXmZUj+vbmUp0lPoXEMuhTpIluN0XL9UY=
 github.com/frankban/quicktest v1.14.4/go.mod h1:4ptaffx2x8+WTWXmUCuVU6aPUX1/Mz7zb5vbUoiM6w0=
 github.com/google/go-cmp v0.5.9 h1:O2Tfq5qg4qc4AmwVlvv0oLiVAGB7enBSJ2x2DqQFi38=

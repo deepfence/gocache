@@ -1,9 +1,9 @@
 module github.com/deepfence/gocache/store/postgresqlcache/v4
 
-go 1.22
+go 1.21
 
 require (
-	github.com/deepfence/gocache/lib/v4 v4.1.6
+	github.com/deepfence/gocache/lib/v4 v4.1.40
 	github.com/jackc/pgx/v5 v5.6.0
 	github.com/klauspost/compress v1.17.9
 	github.com/lib/pq v1.10.9

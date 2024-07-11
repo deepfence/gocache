@@ -1,10 +1,10 @@
 module github.com/eko/gocache/store/pegasus/v4
 
-go 1.22
+go 1.21
 
 require (
 	github.com/XiaoMi/pegasus-go-client v0.0.0-20220519103347-ba0e68465cd5
-	github.com/eko/gocache/lib/v4 v4.1.6
+	github.com/eko/gocache/lib/v4 v4.1.5
 	github.com/smartystreets/assertions v1.13.0
 	github.com/smartystreets/goconvey v1.7.2
 	github.com/spf13/cast v1.5.0

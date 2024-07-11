@@ -1,9 +1,9 @@
 module github.com/eko/gocache/store/go_cache/v4
 
-go 1.22
+go 1.21
 
 require (
-	github.com/eko/gocache/lib/v4 v4.1.6
+	github.com/eko/gocache/lib/v4 v4.1.5
 	github.com/patrickmn/go-cache v2.1.0+incompatible
 	github.com/stretchr/testify v1.8.1
 	go.uber.org/mock v0.4.0

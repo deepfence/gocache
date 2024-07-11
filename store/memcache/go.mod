@@ -1,10 +1,10 @@
 module github.com/eko/gocache/store/memcache/v4
 
-go 1.22
+go 1.21
 
 require (
 	github.com/bradfitz/gomemcache v0.0.0-20230124162541-5f7a7d875746
-	github.com/eko/gocache/lib/v4 v4.1.6
+	github.com/eko/gocache/lib/v4 v4.1.5
 	github.com/stretchr/testify v1.8.1
 	go.uber.org/mock v0.4.0
 	golang.org/x/sync v0.7.0
