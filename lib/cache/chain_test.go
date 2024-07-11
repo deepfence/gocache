@@ -9,8 +9,8 @@ import (
 
 	"github.com/deepfence/gocache/lib/v4/codec"
 	"github.com/deepfence/gocache/lib/v4/store"
-	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
+	"go.uber.org/mock/gomock"
 )
 
 func TestNewChain(t *testing.T) {

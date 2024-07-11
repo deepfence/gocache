@@ -11,7 +11,7 @@ import (
 
 	codec "github.com/deepfence/gocache/lib/v4/codec"
 	store "github.com/deepfence/gocache/lib/v4/store"
-	gomock "github.com/golang/mock/gomock"
+	gomock "go.uber.org/mock/gomock"
 )
 
 // MockCacheInterface is a mock of CacheInterface interface.
